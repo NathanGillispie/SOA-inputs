@@ -1,0 +1,9 @@
+tolerance 3.5
+nloop 100000
+output water_solvated.pdb
+filetype pdb
+
+structure ./water.pdb
+	number 11
+	inside sphere 0 0 0 4.7
+end structure

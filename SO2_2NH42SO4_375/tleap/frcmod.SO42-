@@ -1,0 +1,14 @@
+Sulfate parameters
+MASS
+s6 32.06         2.581               2.900*.89=2.581
+o  16.00         0.386               0.434*.89=.386
+
+BOND
+o -s6  541.1   1.47573
+
+ANGLE 
+o -s6-o    109.5      119.73
+
+NONBON
+  o           1.6612  0.2100             OPLS
+  s6          2.0000  0.2500             W. Cornell CH3SH and CH3SCH3 FEP's

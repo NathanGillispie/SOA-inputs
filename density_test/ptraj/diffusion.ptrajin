@@ -1,0 +1,6 @@
+parm ../md_inputs/water_solvated.prmtop
+trajin production.mdcrd
+
+go
+quit
+

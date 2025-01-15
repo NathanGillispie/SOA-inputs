@@ -1,0 +1,5 @@
+plot [ ] [:0] "summary.EPOLZ" smooth csplines
+set term png
+set output "POLZ.png"
+replot
+quit

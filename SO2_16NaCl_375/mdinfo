@@ -1,0 +1,20 @@
+
+ NSTEP =    25000   TIME(PS) =     500.000  TEMP(K) =   310.39  PRESS =     0.0
+ Etot   =     -5301.9897  EKtot   =       667.0832  EPtot      =     -5969.0729
+ BOND   =         1.2150  ANGLE   =         0.2921  DIHED      =         0.0000
+ 1-4 NB =         0.0000  1-4 EEL =         0.0000  VDWAALS    =      1075.6287
+ EELEC  =     -6154.4362  EHBOND  =         0.0000  RESTRAINT  =         0.0000
+ EPOLZ  =      -891.7724
+ Dipole convergence: rms =  0.430E-04 iters =   5.00
+
+| Final Performance Info:
+| -----------------------------------------------------
+| Average timings for last      50 steps:
+|     Elapsed(s) =       6.73 Per Step(ms) =     134.55
+|         ns/day =       2.57   seconds/ns =   33638.22
+|
+| Average timings for all steps:
+|     Elapsed(s) =    3571.25 Per Step(ms) =     142.85
+|         ns/day =       2.42   seconds/ns =   35712.53
+| -----------------------------------------------------
+

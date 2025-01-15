@@ -1,0 +1,7 @@
+set samples 2000
+set term png
+set output "../bussi-ETOT.png"
+plot [ ] [ ] "summary.ETOT" smooth csplines
+set output "../bussi-DENS.png"
+plot [ ] [ ] "summary.DENSITY" smooth csplines
+quit

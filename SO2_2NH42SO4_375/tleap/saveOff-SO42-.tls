@@ -1,0 +1,47 @@
+loadAmberParams frcmod.SO42-
+
+addAtomTypes {
+	{ "s6" "S" "sp3" }
+	{ "o" "O" "sp2" }
+}
+
+o1 = createAtom O1 o -1.006
+o2 = createAtom O2 o -1.006
+o3 = createAtom O3 o -1.006
+o4 = createAtom O4 o -1.006
+s = createAtom S s6 2.024
+
+set s  element S
+set o1 element O
+set o2 element O
+set o3 element O
+set o4 element O
+
+r = createResidue SO4
+add r o1
+add r o2
+add r o3
+add r o4
+add r s
+
+bond o1 s
+bond o2 s
+bond o3 s
+bond o4 s
+
+so4 = createUnit SO4
+
+add so4 r
+set so4.1 imagingAtom so4.1.S
+
+set so4.1.S position { 0 0 0 }
+set so4.1.O1 position { .9 .9 .9 }
+set so4.1.O2 position { -.9 -.9 .9 }
+set so4.1.O3 position { .9 -.9 -.9 }
+set so4.1.O4 position { -.9 .9 -.9 }
+
+
+setbox so4 centers
+set so4 box {5, 5, 5}
+
+saveOff so4 SO42-.lib

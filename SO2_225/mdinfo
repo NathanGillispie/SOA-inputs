@@ -1,0 +1,23 @@
+
+ NSTEP =    35800   TIME(PS) =     143.200  TEMP(K) =   306.34  PRESS =     0.0
+ Etot   =     -1463.0924  EKtot   =       413.6527  EPtot      =     -1876.7451
+ BOND   =         0.9203  ANGLE   =         1.8053  DIHED      =         0.0000
+ 1-4 NB =         0.0000  1-4 EEL =         0.0000  VDWAALS    =       525.1421
+ EELEC  =     -1896.1055  EHBOND  =         0.0000  RESTRAINT  =         0.0000
+ EPOLZ  =      -508.5074
+ Dipole convergence: rms =  0.952E-04 iters =   4.00
+ ------------------------------------------------------------------------------
+| Current Timing Info
+| -------------------
+| Total steps:    125000 | Completed:     35800 ( 28.6%) | Remaining:     89200
+|
+| Average timings for last      50 steps:
+|     Elapsed(s) =       3.56 Per Step(ms) =      71.27
+|         ns/day =       4.85   seconds/ns =   17816.94
+|
+| Average timings for all steps:
+|     Elapsed(s) =    2646.66 Per Step(ms) =      73.93
+|         ns/day =       4.67   seconds/ns =   18482.26
+|
+| Estimated time remaining:       1.8 hours.
+ ------------------------------------------------------------------------------

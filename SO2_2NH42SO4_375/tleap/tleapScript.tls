@@ -1,0 +1,38 @@
+set default IPOL 1
+
+source leaprc.water.tip3p
+WAT=PL3
+
+loadAmberParams frcmod.pol3
+
+loadAmberParams frcmod.SO2
+loadAmberParams frcmod.SO42-
+loadAmberParams frcmod.NH4+
+
+water = loadPdb "water_solvated.pdb"
+set water restype solvent
+
+loadOff "SO2.lib"
+loadOff "SO42-.lib"
+loadOff "NH4+.lib"
+
+nh4_2 =	copy nh4 
+nh4_3 = copy nh4
+nh4_4 = copy nh4
+
+so4_2 = copy so4
+
+translate so2   {  10.5  10.5  10.5 }
+translate nh4   { -10.5  10.5  10.5 }
+translate nh4_2 {  10.5 -10.5  10.5 }
+translate nh4_3 {  10.5  10.5 -10.5 }
+translate nh4_4 { -10.5 -10.5  10.5 }
+translate so4   {  10.5 -10.5 -10.5 }
+translate so4_2 { -10.5  10.5 -10.5 }
+
+system = sequence {water so2 nh4 nh4_2 nh4_3 nh4_4 so4 so4_2}
+
+set system box {60, 60, 60}
+set system name "WaterBox"
+
+saveAmberParmPol system ../md_inputs/water_solvated.prmtop ../md_inputs/water_solvated.inpcrd

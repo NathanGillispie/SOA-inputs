@@ -1,0 +1,13 @@
+# 01/08/25 21:54:49
+help
+help All
+quit
+# 01/09/25 13:07:43
+parm ../md_inputs/water_solvated.prmtop
+trajin ./prod-test.pdcrd
+trajin prod-test.pdcrd
+trajin "prod-test.pdcrd"
+trajin "prod-test.mdcrd"
+trajout 3-prod.dump
+go
+quit

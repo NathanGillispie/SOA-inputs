@@ -1,0 +1,8 @@
+﻿TITLE SO2
+HETATM    1  S   SO2 A 1        -0.032  -0.351   0.000     S
+HETATM    2  O1  SO2 A 1        -1.163   0.369   0.000     O
+HETATM    3  O2  SO2 A 1         1.226   0.332   0.000     O
+END
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1

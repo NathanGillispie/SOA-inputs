@@ -1,0 +1,9 @@
+Minimization of Water
+ &cntrl
+imin=1,
+maxcyc=100,
+cut=10.0,
+ntc=2,ntf=2,
+ntxo=1,
+ntpr=1,
+/

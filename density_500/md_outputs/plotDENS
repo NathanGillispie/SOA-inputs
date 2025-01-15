@@ -1,0 +1,2 @@
+set samples 2000
+plot "summary.DENSITY" smooth csplines

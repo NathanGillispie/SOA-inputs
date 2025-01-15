@@ -1,0 +1,17 @@
+HEADER 
+TITLE     Built with Packmol                                             
+REMARK   Packmol generated pdb file 
+REMARK   Home-Page: http://m3g.iqm.unicamp.br/packmol
+REMARK
+HETATM    1  O   WAT A   1      -0.336  -2.974   0.416  1.00 59.96           O  
+HETATM    2  O   WAT A   2       2.924  -3.681   1.737  1.00 59.96           O  
+HETATM    3  O   WAT A   3       0.525  -0.366   3.110  1.00 59.96           O  
+HETATM    4  O   WAT A   4       3.300  -1.963  -3.078  1.00 59.96           O  
+HETATM    5  O   WAT A   5       3.990   2.737   0.856  1.00 59.96           O  
+HETATM    6  O   WAT A   6       1.022   0.476  -4.812  1.00 59.96           O  
+HETATM    7  O   WAT A   7       3.625   1.720  -2.816  1.00 59.96           O  
+HETATM    8  O   WAT A   8       0.211   3.104  -2.013  1.00 59.96           O  
+HETATM    9  O   WAT A   9       0.208  -3.746  -3.078  1.00 59.96           O  
+HETATM   10  O   WAT A  10      -2.399  -0.084  -4.349  1.00 59.96           O  
+HETATM   11  O   WAT A  11       3.729  -0.590   0.841  1.00 59.96           O  
+END

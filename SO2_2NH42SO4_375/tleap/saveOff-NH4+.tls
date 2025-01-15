@@ -1,0 +1,47 @@
+loadAmberParams frcmod.NH4+
+
+addAtomTypes {
+	{ "n4" "N" "sp3" }
+	{ "hn" "H" "sp3" }
+}
+
+h1 = createAtom H1 hn 0.244
+h2 = createAtom H2 hn 0.244
+h3 = createAtom	H3 hn 0.244
+h4 = createAtom	H4 hn 0.244
+n = createAtom N n4 0.024
+
+set n element N
+set h1 element H
+set h2 element H
+set h3 element H
+set h4 element H
+
+r = createResidue NH4
+add r n
+add r h1
+add r h2
+add r h3
+add r h4
+
+bond h1 n
+bond h2 n
+bond h3 n
+bond h4 n
+
+nh4 = createUnit NH4
+
+add nh4 r
+
+set nh4.1 imagingAtom nh4.1.N
+
+set nh4.1.N position { -1.5 -.37 -.1 }
+set nh4.1.H1 position { -1.4 -1.4 0 }
+set nh4.1.H2 position { -1.4 0.15 .76 }
+set nh4.1.H3 position { -.7 -.05 -.74 }
+set nh4.1.H4 position { -2.4 -.2 -.6 }
+
+setbox nh4 centers
+set nh4 box {5, 5, 5}
+
+saveOff nh4 NH4+.lib

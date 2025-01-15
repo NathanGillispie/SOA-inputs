@@ -1,0 +1,5 @@
+parm ../md_inputs/water_solvated.prmtop
+trajin production.mdcrd
+radial nopol-water.dat .2 20 :1-378 :WAT center1
+go
+quit

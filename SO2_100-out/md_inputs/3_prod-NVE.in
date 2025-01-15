@@ -1,0 +1,18 @@
+Prod. Run 500ps
+ &cntrl
+irest=1,
+iwrap=1,
+ntx=5,
+ntxo=2,
+nstlim=125000,
+dt=0.004,
+cut=10.0, 
+ntf=2,ntc=2,
+ntt=0,
+ntpr=50,
+ntwx=50,
+ipol=1,
+/
+ &ewald
+indmeth=1,
+/

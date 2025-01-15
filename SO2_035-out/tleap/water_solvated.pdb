@@ -1,0 +1,41 @@
+HEADER 
+TITLE     Built with Packmol                                             
+REMARK   Packmol generated pdb file 
+REMARK   Home-Page: http://m3g.iqm.unicamp.br/packmol
+REMARK
+HETATM    1  O   WAT A   1       2.507   6.208  -1.820  1.00 59.96           O  
+HETATM    2  O   WAT A   2       0.790   6.560   2.310  1.00 59.96           O  
+HETATM    3  O   WAT A   3      -3.244   0.146  -3.893  1.00 59.96           O  
+HETATM    4  O   WAT A   4      -6.319   0.963  -0.872  1.00 59.96           O  
+HETATM    5  O   WAT A   5      -4.007  -5.070   2.688  1.00 59.96           O  
+HETATM    6  O   WAT A   6      -3.378   3.911   3.758  1.00 59.96           O  
+HETATM    7  O   WAT A   7       4.157   4.623   3.224  1.00 59.96           O  
+HETATM    8  O   WAT A   8      -1.971   6.663  -0.838  1.00 59.96           O  
+HETATM    9  O   WAT A   9       3.089  -1.526  -6.095  1.00 59.96           O  
+HETATM   10  O   WAT A  10       2.183   2.771   5.441  1.00 59.96           O  
+HETATM   11  O   WAT A  11      -6.076  -1.398  -3.191  1.00 59.96           O  
+HETATM   12  O   WAT A  12      -0.178   4.336  -2.332  1.00 59.96           O  
+HETATM   13  O   WAT A  13      -2.609  -3.219  -5.641  1.00 59.96           O  
+HETATM   14  O   WAT A  14      -0.716  -1.514   3.663  1.00 59.96           O  
+HETATM   15  O   WAT A  15       4.488   1.327  -5.205  1.00 59.96           O  
+HETATM   16  O   WAT A  16       2.370  -0.064   0.518  1.00 59.96           O  
+HETATM   17  O   WAT A  17       4.931   4.956   0.032  1.00 59.96           O  
+HETATM   18  O   WAT A  18      -3.310   4.672  -4.027  1.00 59.96           O  
+HETATM   19  O   WAT A  19       2.449  -3.302   4.610  1.00 59.96           O  
+HETATM   20  O   WAT A  20      -5.088   4.726  -0.877  1.00 59.96           O  
+HETATM   21  O   WAT A  21       1.450  -2.864  -0.966  1.00 59.96           O  
+HETATM   22  O   WAT A  22       5.402   1.425   4.225  1.00 59.96           O  
+HETATM   23  O   WAT A  23       3.993  -2.893   1.719  1.00 59.96           O  
+HETATM   24  O   WAT A  24      -0.125  -0.904  -5.673  1.00 59.96           O  
+HETATM   25  O   WAT A  25       6.827   0.842   1.306  1.00 59.96           O  
+HETATM   26  O   WAT A  26       3.334  -0.286   6.146  1.00 59.96           O  
+HETATM   27  O   WAT A  27       4.957   0.995  -1.846  1.00 59.96           O  
+HETATM   28  O   WAT A  28      -0.116   2.590   1.471  1.00 59.96           O  
+HETATM   29  O   WAT A  29      -5.643  -4.040  -0.915  1.00 59.96           O  
+HETATM   30  O   WAT A  30      -2.699  -3.590   5.332  1.00 59.96           O  
+HETATM   31  O   WAT A  31      -1.800  -0.199  -0.251  1.00 59.96           O  
+HETATM   32  O   WAT A  32       2.367   3.010  -0.697  1.00 59.96           O  
+HETATM   33  O   WAT A  33       2.169  -6.230  -2.341  1.00 59.96           O  
+HETATM   34  O   WAT A  34      -6.599   0.192   2.325  1.00 59.96           O  
+HETATM   35  O   WAT A  35      -0.866  -4.625   1.241  1.00 59.96           O  
+END

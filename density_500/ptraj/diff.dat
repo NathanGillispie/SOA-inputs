@@ -1,0 +1,5 @@
+#Set     Diff_00001[D] Diff_00001[Slope] Diff_00001[Intercept] Diff_00001[Corr] Diff_00001[Label]
+       1        0.0959            0.0575                0.6824           0.9986  Diff_00001_AvgDr
+       2        0.1006            0.0201               -0.1932           0.9965  Diff_00001_AvgDx
+       3        0.0937            0.0187                0.6926           0.9900  Diff_00001_AvgDy
+       4        0.0933            0.0187                0.1831           0.9958  Diff_00001_AvgDz

@@ -1,0 +1,14 @@
+Ammonium parameters
+MASS
+n4 14.01         0.472               Sp3 N with four connected atoms .530
+hn 1.008         0.143               H bonded to nitrogen atoms .161
+
+BOND
+hn-n4  369.0    1.02147
+
+ANGLE 
+hn-n4-hn 235.0  109.5
+
+NONBON
+  hn          0.6000  0.0157            !Ferguson base pair geom.
+  n4          1.8240  0.1700             OPLS

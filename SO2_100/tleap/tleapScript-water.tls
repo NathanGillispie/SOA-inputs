@@ -1,0 +1,27 @@
+set default IPOL 1
+
+addAtomTypes {
+	{"OS" "O" "sp2"}
+	{"S" "S" "sp3"}
+}
+
+source leaprc.water.tip3p
+WAT = PL3
+
+loadAmberParams frcmod.pol3
+loadAmberParams frcmod.so2
+
+water = loadPdb "water_solvated.pdb"
+set water restype solvent
+
+loadOff "SO2.lib"
+
+system = sequence {water so2}
+set system box {45, 45, 45}
+
+#translate system {20 20 20}
+
+set system name "WaterBox"
+
+saveAmberParmPol system ../md_inputs/water_solvated.prmtop ../md_inputs/water_solvated.inpcrd
+

@@ -1,0 +1,19 @@
+Equilibration 1ns
+ &cntrl
+iwrap=1,
+ntx=5,
+ntxo=2,
+nstlim=500000,
+dt=0.002,
+cut=8.0,
+ntf=2,ntc=2, 
+ntt=9,
+tempi=300.0, 
+temp0=300.0, 
+ntpr=50,
+ntwx=50,
+ipol=1,
+/
+ &ewald
+indmeth=1,
+/

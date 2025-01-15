@@ -1,0 +1,14 @@
+So2 parameters lol
+MASS
+S  32.06 1.30
+OS 15.998 0.540
+
+BOND
+S -OS 300 1.441
+
+ANGLE 
+OS-S -OS 235.0 118.0
+
+NONBON
+S  2.000   0.2500
+OS 1.6612  0.2100

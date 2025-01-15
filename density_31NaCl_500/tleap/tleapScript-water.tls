@@ -1,0 +1,18 @@
+set default IPOL 1
+
+source leaprc.water.tip3p
+WAT = PL3
+
+loadAmberParams frcmod.pol3
+
+water = loadPdb "water_solvated.pdb"
+set water restype solvent
+
+addIonsRand water Na+ 31 Cl- 31
+
+#translate water { -15 -15 -15 }
+setBox water "vdw"
+
+set water name "WaterDensity-ions"
+
+saveAmberParmPol water ../md_inputs/water_solvated.prmtop ../md_inputs/water_solvated.inpcrd

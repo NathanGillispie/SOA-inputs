@@ -1,0 +1,6 @@
+parm ../md_inputs/water_solvated.prmtop
+trajin 3_eq.mdcrd 1 last
+velocityautocorr VAC :WAT out VAC.dat tstep .02
+fft VAC out vacFFT.dat dt .02
+go
+done

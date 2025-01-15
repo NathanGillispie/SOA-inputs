@@ -1,0 +1,10 @@
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    100      -1.7185E+03     5.2616E+00     2.3210E+01     H1        496
+
+ BOND    =        0.2476  ANGLE   =        0.0249  DIHED      =        0.0000
+ VDWAALS =     -160.9189  EEL     =    -1516.2852  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      -41.5262
+ Dipole convergence: rms =  0.598E-01 temperature =   0.00

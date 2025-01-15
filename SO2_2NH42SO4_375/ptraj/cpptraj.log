@@ -1,0 +1,33 @@
+# 01/07/25 23:29:10
+parm ../md_inputs/water_solvated.prmtop
+trajin 1_heating.mdcrd
+help
+help All
+check
+go
+help All
+help distance
+list
+help All
+show
+help show
+# 01/07/25 23:32:38
+parm ../md_inputs/water_solvated.prmtop
+trajin 1_heating.mdcrd
+distance :1 :2
+go
+help dist
+help distance
+help distance
+distance @1 @2 out dist.dat
+go
+distance @0 @2 out dist.dat
+distance @1 @3 out dist.dat
+go
+distance @1 @4 out dist.dat
+go
+distance @1 @5 out dist.dat
+go
+distance @1 @6 out dist.dat
+go
+quit
