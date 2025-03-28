@@ -1,22 +1,23 @@
-Equilibration 100ps
+Equilibration 2000ps
  &cntrl
 iwrap=1,
 ntx=5,
 ntxo=2,
-nstlim=25000,
+nstlim=400000,
 dt=0.004,
-cut=8.0,
+cut=10.0,
 ntf=2,ntc=2, 
 ntt=3,
-gamma_ln=0.001,
-tempi=300.0,
-temp0=300.0,
-ntpr=50,
-ntwx=50,
+ig=-1,
+gamma_ln=0.01,
+tempi=300.0, 
+temp0=300.0, 
+ntpr=200,
+ntwx=200,
 ipol=1,
 /
  &ewald
 indmeth=1,
-diptau=9.95,
-diptol=0.00000009,
+diptol=0.0000001
+diptau=9.98
 /

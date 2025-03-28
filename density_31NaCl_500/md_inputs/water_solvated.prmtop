@@ -1,4 +1,4 @@
-%VERSION  VERSION_STAMP = V0001.000  DATE = 01/06/25  22:53:47                  
+%VERSION  VERSION_STAMP = V0001.000  DATE = 01/16/25  08:47:24                  
 %FLAG TITLE                                                                     
 %FORMAT(20a4)                                                                   
 WaterDensity-ions                                                               
@@ -2260,7 +2260,7 @@ BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA BLA
        3       3       3       3       3       3       3       3       3       3
 %FLAG BOX_DIMENSIONS                                                            
 %FORMAT(5E16.8)                                                                 
-  9.00000000E+01  3.20390000E+01  3.22818160E+01  3.20320000E+01
+  9.00000000E+01  3.10010000E+01  3.12838160E+01  3.09950000E+01
 %FLAG RADIUS_SET                                                                
 %FORMAT(1a80)                                                                   
 modified Bondi radii (mbondi)                                                   

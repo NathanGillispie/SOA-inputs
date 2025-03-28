@@ -1,5 +1,0 @@
-parm ../md_inputs/water_solvated.prmtop
-trajin production.mdcrd
-radial nopol-proton1.dat .2 20 :1-378 :1 center1
-go
-quit

@@ -1,7 +1,4 @@
 import sys
-import os
-import math
-import string
 
 if (len(sys.argv)!=2):
 	raise NameError("arguments must be number of water molecules!")

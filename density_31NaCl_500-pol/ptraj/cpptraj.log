@@ -1,0 +1,21 @@
+# 01/07/25 10:11:20
+parm ../md_inputs/water_solvated.prmtop
+trajin production.mdcrd
+help diffusion
+diffusion diffout diffusion.dat
+diffusion :WAT diffout diffusion.dat
+go
+quit
+# 01/07/25 10:15:36
+parm ../md_inputs/water_solvated.prmtop
+trajin production.mdcrd
+help rmsd
+rmsd :WAT out rmsd.dat first
+go
+quit
+# 01/07/25 10:29:24
+parm ../md_inputs/water_solvated.prmtop
+trajin production.mdcrd
+help rmsd
+rmsd :WAT out rmsd.dat first
+quit

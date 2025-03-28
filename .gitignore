@@ -1,3 +1,5 @@
 # Too large
 *.mdcrd
 *.out
+*.pkl
+*.dat

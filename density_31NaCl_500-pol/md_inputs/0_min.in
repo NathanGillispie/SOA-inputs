@@ -1,0 +1,13 @@
+Minimization of Water
+ &cntrl
+imin=1,
+iwrap=1,
+maxcyc=10,
+cut=10.0,
+ntc=2, ntf=2,
+ntp=0,
+ntxo=1,
+ntpr=1,
+ntwx=1,
+ipol=0,
+/
