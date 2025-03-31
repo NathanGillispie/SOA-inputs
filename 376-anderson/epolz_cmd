@@ -1,0 +1,2 @@
+sed -n 's/EPOLZ  =\s\+\(.*\)/\1/p' md_outputs/2_eq.out > EPOLZ
+

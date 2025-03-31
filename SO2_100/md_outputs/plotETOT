@@ -1,6 +1,11 @@
-plot [ ] [:0]  "summary.ETOT" smooth csplines
 set samples 2000
 set term png
 set output "ETOT.png"
-replot
+plot [ ] [ ]  "summary.ETOT" smooth csplines
+
+set output "EPOLZ.png"
+plot [ ] [ ]  "summary.EPOLZ" smooth csplines
+
+set output "TEMP.png"
+plot [ ] [ ]  "summary.TEMP" smooth csplines
 quit

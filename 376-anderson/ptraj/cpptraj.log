@@ -1,0 +1,18 @@
+# 03/30/25 16:17:13
+parm ../md_inputs/water_solvated.prmtop
+trajin 2_eq.mdcrd
+help trajout
+trajout 2_eq-skip100ps.mdcrd crd start 100 stop
+help
+help All
+help statistics
+statistics 2_eq.mdcrd
+help trajin
+trajin 2_eq.mdcrd 125 last 1
+quit
+# 03/30/25 16:20:59
+parm ../md_inputs/water_solvated.prmtop
+trajin 2_eq.mdcrd 125 last 1
+trajout 2_eq-skip100ps.mdcrd crd
+go
+quit

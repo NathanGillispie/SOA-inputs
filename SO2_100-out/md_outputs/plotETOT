@@ -1,4 +1,0 @@
-set samples 2000
-set term png
-set output "ETOT.png"
-plot [ ] [ ]  "summary.ETOT" smooth csplines

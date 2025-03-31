@@ -26,7 +26,7 @@ print "Starting output...\n";
 @sortedkeys = sort by_number keys(%TIME);
 @sortedavgkeys = sort by_number keys(%AVG_TIME);
 
-foreach $i ( TEMP, ETOT, EKTOT, EPTOT, VOLUME, EPOLZ) {
+foreach $i ( TEMP, ETOT, EKTOT, EPTOT, EPOLZ) {
     print "Outputing summary.$i\n";
     open(OUTPUT, "> summary.$i");
     %outarray = eval "\%$i";
@@ -35,23 +35,21 @@ foreach $i ( TEMP, ETOT, EKTOT, EPTOT, VOLUME, EPOLZ) {
     }
     close (OUTPUT);
 
-    print "Outputing summary_avg.$i\n";
-    open(OUTPUT, "> summary_avg.$i");
-    %outarray = eval "\%AVG_$i";
-    foreach $j ( @sortedavgkeys ) {
-	print OUTPUT "$j  ", $outarray{$j}, "\n";
-    }
-    close (OUTPUT);
-
-    print "Outputing summary_rms.$i\n";
-    open(OUTPUT, "> summary_rms.$i");
-    %outarray = eval "\%RMS_$i";
-    foreach $j ( @sortedavgkeys ) {
-	print OUTPUT "$j  ", $outarray{$j}, "\n";
-    }
-    close (OUTPUT);
-
-
+	#    print "Outputing summary_avg.$i\n";
+	#    open(OUTPUT, "> summary_avg.$i");
+	#    %outarray = eval "\%AVG_$i";
+	#    foreach $j ( @sortedavgkeys ) {
+	# print OUTPUT "$j  ", $outarray{$j}, "\n";
+	#    }
+	#    close (OUTPUT);
+	#
+	#    print "Outputing summary_rms.$i\n";
+	#    open(OUTPUT, "> summary_rms.$i");
+	#    %outarray = eval "\%RMS_$i";
+	#    foreach $j ( @sortedavgkeys ) {
+	# print OUTPUT "$j  ", $outarray{$j}, "\n";
+	#    }
+	#    close (OUTPUT);
 }
 
 
@@ -85,81 +83,90 @@ sub process_input {
 	    ($time, $temp, $pres) =
 		/NSTEP =.*TIME.* =(.*\d*\.\d*).*TEMP.* =(.*\d*\.\d*).*PRESS = (.*\d*\.\d*)/;
 	    if ( $debug ) {
-		print $_;
-		print "time is $time, temp is $temp, pres is $pres\n";
+			print $_;
+			print "time is $time, temp is $temp, pres is $pres\n";
 	    }
 	    $_ = <INPUT>;
 
 	    if (/Etot/) {
-		($etot, $ektot, $eptot) =
-		    /Etot.*=(.*\d*\.\d*).*EKtot.*=(.*\d*\.\d*).*EPtot.*=(.*\d*\.\d*)/;
-		if ( $debug ) {
-		    print $_;
-		    print "Etot is $etot, ektot is $ektot, eptot is $eptot\n";
-		}
-		$_ = <INPUT>;
+				($etot, $ektot, $eptot) =
+					/Etot.*=(.*\d*\.\d*).*EKtot.*=(.*\d*\.\d*).*EPtot.*=(.*\d*\.\d*)/;
+			if ( $debug ) {
+				print $_;
+				print "Etot is $etot, ektot is $ektot, eptot is $eptot\n";
+			}
+			$_ = <INPUT>;
 	    }
 	    if (/BOND.*ANGLE.*DIHED/) {
-		($bond, $angle, $dihedral) =
-		    /BOND.*=(.*\d*\.\d*).*ANGLE.*=(.*\d*\.\d*).*DIHED.*=(.*\d*\.\d*)/;
-		if ( $debug ) {
-		    print $_;
-		    print "bond is $bond, angle is $angle, dihedral is $dihedral\n";
-		}
-		$_ = <INPUT>;
+			($bond, $angle, $dihedral) =
+				/BOND.*=(.*\d*\.\d*).*ANGLE.*=(.*\d*\.\d*).*DIHED.*=(.*\d*\.\d*)/;
+			if ( $debug ) {
+				print $_;
+				print "bond is $bond, angle is $angle, dihedral is $dihedral\n";
+			}
+			$_ = <INPUT>;
 	    }
 	    if (/1-4 NB/) {
-		($nb14, $eel14, $nb) =
-		    /1-4 NB.*=(.*\d*\.\d*).*1-4 EEL.*=(.*\d*\.\d*).*VDWAALS.*=(.*\d*\.\d*)/;
-		if ( $debug ) {
-		    print $_;
-		    print "nb14 is $nb14, eel14 is $eel14, vdwaals is $nb\n";
-		}
-		$_ = <INPUT>;
+			($nb14, $eel14, $nb) =
+				/1-4 NB.*=(.*\d*\.\d*).*1-4 EEL.*=(.*\d*\.\d*).*VDWAALS.*=(.*\d*\.\d*)/;
+			if ( $debug ) {
+				print $_;
+				print "nb14 is $nb14, eel14 is $eel14, vdwaals is $nb\n";
+			}
+			$_ = <INPUT>;
 	    }
 	    if (/EELEC/) {
-		($eel, $ehbond, $constraint) =
-		    /EELEC.*=(.*\d*\.\d*).*EHBOND.*=(.*\d*\.\d*).*CONSTRAINT.*=(.*\d*\.\d*)/;
-		if ( $debug ) {
-		    print $_;
-		    print "eel is $eel, ehbond is $ehbond, constraint is $constraint\n";
-		}
-		$_ = <INPUT>;
+			($eel, $ehbond, $restraint) =
+				/EELEC.*=(.*\d*\.\d*).*EHBOND.*=(.*\d*\.\d*).*RESTRAINT.*=(.*\d*\.\d*)/;
+			if ( $debug ) {
+				print $_;
+				print "eel is $eel, ehbond is $ehbond, restraint is $restraint\n";
+			}
+			$_ = <INPUT>;
 #
 #               check to see if EAMBER is in the mdout file (present when
 #               NTR=1)
 #
-	        if ( /EAMBER/ ) {
-		    $_ = <INPUT>;
-		}
+			if ( /EAMBER/ ) {
+				$_ = <INPUT>;
+			}
 	    }
 	    if (/EKCMT/) {
-		($ekcmt, $virial, $volume) =
-		    /EKCMT.*=(.*\d*\.\d*).*VIRIAL.*=(.*\d*\.\d*).*VOLUME.*=(.*\d*\.\d*)/;
-		if ( $debug ) {
-		    print $_;
-		    print "Ekcmt is $ekcmt, virial is $virial, volume is $volume\n";
-		}
-		$_ = <INPUT>;
+			($ekcmt, $virial, $volume) =
+				/EKCMT.*=(.*\d*\.\d*).*VIRIAL.*=(.*\d*\.\d*).*VOLUME.*=(.*\d*\.\d*)/;
+			if ( $debug ) {
+				print $_;
+				print "Ekcmt is $ekcmt, virial is $virial, volume is $volume\n";
+			}
+			$_ = <INPUT>;
 	    }
 	    if (/T_SOLUTE/) {
-		($tsolute, $tsolvent) =
-		    /T_SOLUTE =(.*\d*\.\d*).*T_SOLVENT =(.*\d*\.\d*)/;
-		if ( $debug ) {
-		    print $_;
-		    print "Temp solute is $tsolute, temp solvent is $tsolvent\n";
-		}
-		$_ = <INPUT>;
+			($tsolute, $tsolvent) =
+				/T_SOLUTE =(.*\d*\.\d*).*T_SOLVENT =(.*\d*\.\d*)/;
+			if ( $debug ) {
+				print $_;
+				print "Temp solute is $tsolute, temp solvent is $tsolvent\n";
+			}
+			$_ = <INPUT>;
 	    }
 
 	    if (/Density/) {
-		($density) = /.*Density.*=(.*\d*\.\d*)/;
-		if ( $debug ) {
-		    print $_;
-		    print "Density is $density\n";
-		}
-		$_ = <INPUT>;
+			($density) = /.*Density.*=(.*\d*\.\d*)/;
+			if ( $debug ) {
+				print $_;
+				print "Density is $density\n";
+			}
+			$_ = <INPUT>;
 	    }
+
+		if (/EPOLZ/) {
+			($epolz) = /.*EPOLZ.*=(.*\d*\.\d*)/;
+			if ( $debug ) {
+				print $_;
+				print "EPOLZ is $epolz\n";
+			}
+			$_ = <INPUT>;
+		}
 
 #       update arrays
 
@@ -185,6 +192,7 @@ sub process_input {
 		$AVG_TSOLUTE{$time}    = $tsolute;
 		$AVG_TSOLVENT{$time}   = $tsolvent;
 		$AVG_DENSITY{$time}    = $density;
+		$AVG_EPOLZ{$time}      = $epolz;
 		
 		$averages = 0;
 	    } elsif ( $rms == 1 ) {
@@ -209,6 +217,7 @@ sub process_input {
 		$RMS_TSOLUTE{$time}    = $tsolute;
 		$RMS_TSOLVENT{$time}   = $tsolvent;
 		$RMS_DENSITY{$time}    = $density;
+		$RMS_EPOLZ{$time}      = $epolz;
 		
 		$rms = 0;
 	    } else {
@@ -229,10 +238,11 @@ sub process_input {
 		$CONSTRAINT{$time} = $constraint;
 		$EKCMT{$time}      = $ekcmt;
 		$VIRIAL{$time}     = $virial;
-		$VOLUME{$time}     = $volume;	
+		$VOLUME{$time}     = $volume;
 		$TSOLUTE{$time}    = $tsolute;
 		$TSOLVENT{$time}   = $tsolvent;
 		$DENSITY{$time}    = $density;
+		$EPOLZ{$time}      = $epolz;
 	    }
 
 	}

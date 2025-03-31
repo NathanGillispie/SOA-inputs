@@ -1,9 +1,9 @@
-Equilibration 400ps
+Equilibration 2000ps
  &cntrl
 iwrap=1,
 ntx=5,
 ntxo=2,
-nstlim=100000,
+nstlim=500000,
 dt=0.004,
 cut=10.0,
 ntf=2,ntc=2, 
@@ -12,8 +12,9 @@ ig=-1,
 gamma_ln=2.0,
 tempi=300.0, 
 temp0=300.0, 
-ntpr=50,
-ntwx=50,
+ntpr=200,
+ntwx=200,
+ntwr=-16000,
 ipol=1,
 /
  &ewald

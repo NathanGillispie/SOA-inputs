@@ -1,0 +1,23 @@
+Equilibration 2000ps with 222 Anderson-like collisions
+ &cntrl
+iwrap=1,
+ntx=5,
+ntxo=2,
+nstlim=500000,
+dt=0.004,
+cut=10.0,
+ntf=2,ntc=2,
+ntt=2,
+ig=-1,
+vrand=2250,
+temp0=300.0,
+ntpr=200,
+ntwx=200,
+ntwr=-10000,
+ipol=1,
+/
+ &ewald
+indmeth=1,
+diptol=0.00001
+diptau=9.99
+/

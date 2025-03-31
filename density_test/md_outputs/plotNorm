@@ -1,7 +1,0 @@
-set samples 2000
-set term png
-set output "../normal-ETOT.png"
-plot [ ] [ ] "summary.ETOT" smooth csplines
-set output "../normal-DENS.png"
-plot [ ] [ ] "summary.DENSITY" smooth csplines
-quit

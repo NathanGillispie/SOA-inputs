@@ -1,0 +1,5 @@
+parm ../md_inputs/water_solvated.prmtop
+trajin prod_110000.mdcrd
+trajout prod_110000.crd crd
+go
+quit

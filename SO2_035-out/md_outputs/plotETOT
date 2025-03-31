@@ -1,2 +1,0 @@
-set samples 2000
-plot [ ] [:0]  "summary.ETOT" smooth csplines

@@ -1,5 +1,0 @@
-set samples 2000
-set terminal png
-set output "ETOT.png"
-plot [ ] [:0]  "summary.ETOT" smooth csplines
-quit

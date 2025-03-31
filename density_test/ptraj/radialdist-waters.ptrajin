@@ -1,5 +1,0 @@
-parm ../md_inputs/water_solvated.prmtop
-trajin production.mdcrd
-radial waters.dat .2 20 @%OW
-go
-quit
